@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="1015.0" style="-fx-background-color: #5d5b69;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierPgController">
+   <children>
+      <AnchorPane fx:id="cashierContext" layoutX="210.0" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: #afc0de;">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="163.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/customer_96px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="103.0" layoutY="327.0" text="Customer Manage">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="24.0" text="Select Option">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Separator layoutX="246.0" layoutY="49.0" prefHeight="0.0" prefWidth="523.0" />
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="538.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/purchase_order_96px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="489.0" layoutY="327.0" text="Order Manage">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="18.0" layoutY="51.0" prefHeight="35.0" prefWidth="174.0" text="Manage Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="98.0" onAction="#goToOrderManage" prefHeight="41.0" prefWidth="196.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Manage Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="12.0" layoutY="176.0" prefHeight="35.0" prefWidth="189.0" text="Manage Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="225.0" onAction="#goToCustomerManage" prefHeight="41.0" prefWidth="196.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Manage Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="55.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Cashier96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="486.0" text="Cashier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="285.0" onAction="#goToMakePayment" prefHeight="41.0" prefWidth="196.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Make Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

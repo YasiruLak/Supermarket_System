@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="810.0" style="-fx-background-color: #4a5675;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="642.0" layoutY="20.0" onAction="#refreshOnAction" prefHeight="35.0" prefWidth="81.0" ripplerFill="#962525" style="-fx-background-color: #610b0f; -fx-background-radius: 100;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="94.0" layoutY="34.0" prefHeight="1.0" prefWidth="508.0" />
+      <TableView fx:id="tblOrder" layoutX="47.0" layoutY="95.0" prefHeight="249.0" prefWidth="720.0">
+        <columns>
+          <TableColumn fx:id="colOrderId" prefWidth="100.0" text="Order Id" />
+          <TableColumn fx:id="colCustomerId" prefWidth="109.0" text="Customer Id" />
+            <TableColumn fx:id="colOrderDate" prefWidth="191.0" text="Order Date" />
+            <TableColumn fx:id="colOrderTime" prefWidth="183.0" text="Order Time" />
+            <TableColumn fx:id="colCost" prefWidth="136.0" text="Cost" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

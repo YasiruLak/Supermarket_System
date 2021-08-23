@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageOrderContext" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: #6b6c6e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderManagePgController">
+   <children>
+      <Label layoutX="14.0" layoutY="11.0" text="Order Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="185.0" layoutY="29.0" prefHeight="0.0" prefWidth="607.0" />
+      <TableView fx:id="tblCart" layoutX="19.0" layoutY="308.0" prefHeight="188.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="123.0" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="218.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="138.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="147.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="138.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="65.0" text="Order Id :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="114.0" layoutY="65.0" text="O001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCustomerIds" layoutX="14.0" layoutY="107.0" prefHeight="30.0" prefWidth="130.0" promptText="Customer Id" />
+      <ComboBox fx:id="cmbItemCode" layoutX="15.0" layoutY="197.0" prefHeight="30.0" prefWidth="130.0" promptText="Item Code" />
+      <TextField fx:id="txtName" layoutX="162.0" layoutY="107.0" prefHeight="30.0" prefWidth="192.0" promptText="Customer Name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtAddress" layoutX="575.0" layoutY="108.0" prefHeight="31.0" prefWidth="192.0" promptText="Customer Address">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtCity" layoutX="162.0" layoutY="147.0" prefHeight="31.0" prefWidth="149.0" promptText="City">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtProvince" layoutX="371.0" layoutY="148.0" prefHeight="30.0" prefWidth="149.0" promptText="Province">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtDescription" layoutX="163.0" layoutY="197.0" prefHeight="30.0" prefWidth="163.0" promptText="Description">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtQtyOnHand" layoutX="345.0" layoutY="197.0" prefHeight="30.0" prefWidth="130.0" promptText="Qty On Hand">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtUnitPrice" layoutX="489.0" layoutY="197.0" prefHeight="30.0" prefWidth="130.0" promptText="Unit Price">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtQty" layoutX="666.0" layoutY="197.0" prefHeight="30.0" prefWidth="130.0" promptText="Qty">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Separator layoutX="640.0" layoutY="196.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" />
+      <JFXButton buttonType="RAISED" layoutX="663.0" layoutY="250.0" onAction="#addToCartOnAction" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #3667f7;" text="Add To Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="250.0" onAction="#clearOnAction" prefHeight="35.0" prefWidth="67.0" ripplerFill="#962525" style="-fx-background-color: #678f5b;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="29.0" layoutY="521.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtTtl" layoutX="89.0" layoutY="521.0" prefHeight="27.0" prefWidth="81.0" text="0000" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="666.0" layoutY="517.0" onAction="#placeOrderOnAction" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #3a1ce6;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtTitle" layoutX="371.0" layoutY="108.0" prefHeight="30.0" prefWidth="192.0" promptText="Customer Title">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPostalCode" layoutX="575.0" layoutY="148.0" prefHeight="30.0" prefWidth="149.0" promptText="Postal Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblTime" contentDisplay="CENTER" layoutX="517.0" layoutY="52.0" text="10:12:35" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="311.0" layoutY="52.0" text="2021-12-23" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="682.0" layoutY="48.0" onAction="#refreshPage" prefHeight="35.0" prefWidth="81.0" ripplerFill="#962525" style="-fx-background-color: #610b0f; -fx-background-radius: 100;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblDate1" alignment="CENTER" layoutX="229.0" layoutY="50.0" text="Today :">
+         <font>
+            <Font name="AGaramondPro-Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate11" alignment="CENTER" layoutX="454.0" layoutY="50.0" text="Date :">
+         <font>
+            <Font name="AGaramondPro-Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

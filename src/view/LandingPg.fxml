@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginContext" prefHeight="690.0" prefWidth="1015.0" style="-fx-background-color: #afc0de;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LandingPgController">
+   <children>
+      <AnchorPane fx:id="loginContextOne" layoutY="122.0" prefHeight="570.0" prefWidth="1015.0" style="-fx-background-color: #486b75;">
+         <children>
+            <AnchorPane layoutX="220.0" layoutY="76.0" prefHeight="380.0" prefWidth="745.0" style="-fx-background-radius: 30; -fx-background-color: #7da188;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="241.0" onAction="#logInOnAction" prefHeight="44.0" prefWidth="233.0" style="-fx-background-color: #3c4be8; -fx-background-radius: 20;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtUserName" layoutX="98.0" layoutY="71.0" prefHeight="51.0" prefWidth="571.0" promptText="User Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPassword" layoutX="98.0" layoutY="164.0" prefHeight="51.0" prefWidth="571.0" promptText="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXPasswordField>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assests/user_group_96px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assests/password_96px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="931.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0.0" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="37.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/Admin96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="37.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/Cashier96px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="155.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="361.0" text="Cashier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="11.0" layoutY="492.0" onAction="#logOut" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: #13184f; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text layoutX="471.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2021 Supermarcket. All Right Reserved Design By Yasiru Dahanayaka " />
+         </children>
+      </AnchorPane>
+      <Text fill="#4b4668" layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUPERMARCKET" wrappingWidth="283.44140625">
+         <font>
+            <Font name="AmericanTypItcTEEBol Italic" size="30.0" />
+         </font>
+      </Text>
+      <Separator layoutX="14.0" layoutY="67.0" prefHeight="6.0" prefWidth="283.0" />
+      <JFXButton buttonType="RAISED" layoutX="928.0" layoutY="17.0" onAction="#closeWindow" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #e32d20; -fx-border-radius: 2; -fx-background-radius: 15;" textFill="#e32d20">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fx:id="btnExit" glyphName="POWER_OFF" size="30" wrappingWidth="20.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="859.0" layoutY="17.0" onAction="#backToHome" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #26873e; -fx-border-radius: 2; -fx-background-radius: 15;" text="Home" textFill="#26873e">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="HOME" size="30" wrappingWidth="20.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane layoutX="351.0" layoutY="20.0" prefHeight="76.0" prefWidth="470.0" style="-fx-background-radius: 25; -fx-background-color: #997950;">
+         <children>
+            <Label fx:id="lblTime" contentDisplay="CENTER" layoutX="319.0" layoutY="25.0" text="10:12:35" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="107.0" layoutY="24.0" text="2021-12-23" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate1" alignment="CENTER" layoutX="23.0" layoutY="22.0" text="Today :" textFill="WHITE">
+               <font>
+                  <Font name="AGaramondPro-Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate11" alignment="CENTER" layoutX="252.0" layoutY="23.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="AGaramondPro-Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

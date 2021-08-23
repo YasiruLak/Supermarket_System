@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="viewReportContext" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: #8a8a8a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewReportController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="66.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/customer_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="631.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/purchase_order_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="355.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/items_96px.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="44.0" layoutY="124.0" onAction="#goToViewCustomer" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #4e6ebf; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="333.0" layoutY="124.0" onAction="#goToViewItem" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #4e6ebf; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="609.0" layoutY="124.0" onAction="#goToViewOrder" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #4e6ebf; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="viewReportContextTwo" layoutY="180.0" prefHeight="390.0" prefWidth="810.0" style="-fx-background-color: #3e3d40;">
+         <children>
+            <Label layoutX="327.0" layoutY="170.0" prefHeight="47.0" prefWidth="262.0" text="Select An Option" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

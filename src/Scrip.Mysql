@@ -1,0 +1,76 @@
+DROP DATABASE IF EXISTS Supermarket;
+CREATE DATABASE IF NOT EXISTS Supermarket;
+SHOW DATABASES ;
+USE Supermarket;
+
+DROP TABLE IF EXISTS Customer;
+CREATE TABLE IF NOT EXISTS Customer(
+    CustID VARCHAR(6),
+    CustTitle VARCHAR(5),
+    CustName VARCHAR(30) NOT NULL DEFAULT 'Unknown',
+    CustAddress VARCHAR(30),
+    City VARCHAR(20),
+    Province VARCHAR(20),
+    PostalCode VARCHAR(9),
+    CONSTRAINT PRIMARY KEY (CustId)
+    );
+SHOW TABLES ;
+DESCRIBE Customer;
+
+DROP TABLE IF EXISTS `Order`;
+CREATE TABLE IF NOT EXISTS `Order`(
+    OrderID VARCHAR(15),
+    CustID VARCHAR(15),
+    OrderDate VARCHAR(10),
+    OrderTime VARCHAR(15),
+    Cost DOUBLE,
+    CONSTRAINT PRIMARY KEY (OrderID),
+    CONSTRAINT FOREIGN KEY (CustID) REFERENCES Customer (CustID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE `Order`;
+
+DROP TABLE IF EXISTS Item;
+CREATE TABLE IF NOT EXISTS Item(
+    ItemCode VARCHAR(6),
+    Description VARCHAR(50),
+    PackSize VARCHAR(20),
+    UnitPrice DECIMAL(6,2),
+    QtyOnHand INT(5),
+    CONSTRAINT PRIMARY KEY (ItemCode)
+    );
+SHOW TABLES ;
+DESCRIBE Item;
+
+DROP TABLE IF EXISTS `Order Detail`;
+CREATE TABLE IF NOT EXISTS `Order Detail`(
+    ItemCode VARCHAR(15),
+    OrderID VARCHAR(15),
+    Qty INT,
+    Price DOUBLE,
+    CONSTRAINT PRIMARY KEY (OrderID, ItemCode),
+    CONSTRAINT FOREIGN KEY (ItemCode) REFERENCES Item (ItemCode) ON DELETE CASCADE ON UPDATE CASCADE ,
+    CONSTRAINT FOREIGN KEY (OrderID) REFERENCES `Order`(OrderID) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+SHOW TABLES ;
+DESCRIBE `Order Detail`;
+
+SELECT * FROM Customer;
+SELECT * FROM Item;
+SELECT * FROM `Order`;
+SELECT * FROM `Order Detail`;
+
+SELECT * FROM  `Order` LEFT JOIN Customer ON Customer.CustId = `Order`.OrderId UNION ALL SELECT * FROM Customer RIGHT JOIN `Order` ON Customer.CustId = `Order`.OrderId;
+
+SELECT * FROM `Order` ORDER BY Cost ASC;
+
+SELECT  i.ItemCode ,i.Description,i.UnitPrice,SUM(i.UnitPrice*od.OrderQty) from orderdetail od INNER JOIN Item i INNER JOIN orders o ON i.ItemCode=od.ItemCode AND od.OrderID=o.OrderID  WHERE o.OrderDate='" + 22/08/2021 + "' GROUP BY ItemCode;
+
+SELECT * FROM `Order` WHERE CustId = SUM(itemCode * unitPrice);
+SELECT `Order`.orderDate,sum(`Order detail`.Qty) FROM `Order` INNER JOIN `Order Detail` ON `Order`.OrderID = `Order detail`.OrderID GROUP BY orderDate;
+
+SELECT OrderDate,count(OrderID),sum(Cost) from `Order` group by OrderDate;
+
+
+SELECT `Order`.OrderDate,sum(`Order detail`.Qty) FROM `Order` INNER JOIN `Order Detail` ON `Order`.OrderID = `Order detail`.OrderID GROUP BY OrderDate;
+SELECT OrderDate,count(OrderID),sum(Cost) from `Order` group by OrderDate;

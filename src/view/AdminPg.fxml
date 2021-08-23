@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="1015.0" style="-fx-background-color: #5d80a3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminPgController">
+   <children>
+      <AnchorPane fx:id="adminContext" layoutX="224.0" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: #afc0de;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Select Option">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Separator layoutX="227.0" layoutY="36.0" prefHeight="0.0" prefWidth="523.0" />
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="171.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/investment_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="171.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/customer_income_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="550.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/items_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="550.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/Move_Items_96px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="241.0" text="Business Income">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="468.0" text="Customer Income">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="522.0" layoutY="241.0" text="Item Moves">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="511.0" layoutY="468.0" text="Item Manage">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="29.0" layoutY="14.0" text="System Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="64.0" onAction="#goToIncome" prefHeight="41.0" prefWidth="207.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Business Income" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="124.0" onAction="#goToMoveItem" prefHeight="41.0" prefWidth="207.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Moves Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="185.0" onAction="#goToCustomerIncome" prefHeight="41.0" prefWidth="207.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Customer Wise Income" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="36.0" layoutY="304.0" text="Manage Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="353.0" onAction="#goToItemManage" prefHeight="41.0" prefWidth="207.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="Items Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="62.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Admin96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="506.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="245.0" onAction="#goToViewReport" prefHeight="41.0" prefWidth="207.0" style="-fx-background-color: #322ea3; -fx-background-radius: 15; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: white;" text="View Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
