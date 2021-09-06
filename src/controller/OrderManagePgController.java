@@ -254,30 +254,30 @@ public class OrderManagePgController {
     }
 
     public void placeOrderOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-//        ArrayList<ItemDetails> items= new ArrayList<>();
-//        double total=0;
-//        for (CartTM tempTm:obList
-//        ) {
-//            total+=tempTm.getTotal();
-//            items.add(new ItemDetails(tempTm.getCode(),tempTm.getUnitPrice(),
-//                    tempTm.getQty()));
-//        }
-//
-//        Order order= new Order(lblOrderId.getText(), cmbCustomerIds.getValue(),
-//                lblDate.getText(),
-//                lblTime.getText(),
-//                total,
-//                items
-//        );
-//        if (new OrderController().placeOrder(order)){
-//            new Alert(Alert.AlertType.CONFIRMATION, "Success").show();
-//            txtName.clear();txtTitle.clear();txtAddress.clear();txtCity.clear();txtProvince.clear();
-//            txtPostalCode.clear();txtDescription.clear();txtQtyOnHand.clear();txtUnitPrice.clear();txtQty.clear();
-//
-//            setOrderId();
-//        }else{
-//            new Alert(Alert.AlertType.WARNING, "Try Again").show();
-//        }
+        ArrayList<ItemDetails> items= new ArrayList<>();
+        double total=0;
+        for (CartTM tempTm:obList
+        ) {
+            total+=tempTm.getTotal();
+            items.add(new ItemDetails(tempTm.getCode(),tempTm.getUnitPrice(),
+                    tempTm.getQty()));
+        }
+
+        Order order= new Order(lblOrderId.getText(), cmbCustomerIds.getValue(),
+                lblDate.getText(),
+                lblTime.getText(),
+                total,
+                items
+        );
+        if (new OrderController().placeOrder(order)){
+            new Alert(Alert.AlertType.CONFIRMATION, "Success").show();
+            txtName.clear();txtTitle.clear();txtAddress.clear();txtCity.clear();txtProvince.clear();
+            txtPostalCode.clear();txtDescription.clear();txtQtyOnHand.clear();txtUnitPrice.clear();txtQty.clear();
+
+            setOrderId();
+        }else{
+            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+        }
     }
 
 
